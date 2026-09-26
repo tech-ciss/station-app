@@ -1,0 +1,66 @@
+{
+  "expo": {
+    "name": "YELY Station",
+    "slug": "yely-station-v3",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "scheme": "yely-station",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "androidNavigationBar": {
+      "backgroundColor": "#FFFFFF",
+      "barStyle": "dark-content"
+    },
+    "android": {
+      "package": "ci.yely.station",
+      "versionCode": 1,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.CAMERA"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/yely-icon.png",
+        "backgroundColor": "#0F8A4B"
+      }
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "ci.yely.station",
+      "infoPlist": {
+        "NSCameraUsageDescription": "YELY Station utilise la caméra pour scanner les QR chauffeurs et prendre les justificatifs.",
+        "NSPhotoLibraryUsageDescription": "YELY Station utilise la galerie pour sélectionner une photo justificative."
+      }
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Autorisez YELY Station à utiliser la caméra pour scanner les QR chauffeurs."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Autorisez YELY Station à accéder à vos photos pour joindre un justificatif.",
+          "cameraPermission": "Autorisez YELY Station à utiliser la caméra pour prendre un justificatif.",
+          "microphonePermission": false
+        }
+      ],
+      "expo-font"
+    ],
+    "experiments": {
+      "autolinkingModuleResolution": true,
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "21038069-e8a4-425a-a076-035adcdef7d0"
+      }
+    }
+  }
+}
